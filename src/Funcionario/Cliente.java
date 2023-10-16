@@ -1,10 +1,10 @@
 package Funcionario;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Cliente implements Autenticavel {
 
     private AutenticavelUtils autenticador;
 
-    public Gerente() {
+    public Cliente() {
         this.autenticador = new AutenticavelUtils();
     }
 
@@ -16,10 +16,6 @@ public class Gerente extends Funcionario implements Autenticavel {
     @Override
     public boolean autentica(int senha) {
         return this.autenticador.autentica(senha);
-    }
-
-    public double getBonificacao() {
-        return this.getSalario();
     }
 
 }
